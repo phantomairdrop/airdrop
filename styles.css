@@ -569,11 +569,21 @@ form {
   font-size: 16px;
 }
 
+
 .wallet-options {
-  display: ruby;
+  display: flex;
   justify-content: space-between;
   margin-bottom: 18px;
 }
+
+.wallet-option {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
 
 .each-option {
   font-size: 12px; 
@@ -585,14 +595,7 @@ form {
   justify-items: center;
 }
 
-.wallet-option {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  cursor: pointer;
-  display: flex;
 
-}
 
 .popup-body h4 {
   margin-bottom: 6px;
