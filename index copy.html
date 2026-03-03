@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CryptoWallet Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="toast" class="toast">Logged in successfully</div>
+
+<script>
+  if (localStorage.getItem("auth") === "true") {
+    history.replaceState(null, "", "home.html");
+    window.location.replace("home.html");
+  }
+</script>
+
+<div class="container">
+  <div class="card">
+    <div class="logo"><img alt="cwallet" loading="lazy" width="160" height="32" decoding="async" data-nimg="1" style="color:transparent" src="cwallet-logo.25245e2e.svg"></div>
+
+    <h1>Log in</h1>
+    
+    <div class="tabs">
+      <button class="tab active" id="emailTab">Email</button>
+      <button class="tab" id="mobileTab">Mobile</button>
+    </div>
+
+    <form id="loginForm">
+      <input id="loginInput" placeholder="Enter email" required />
+
+      <input
+        id="passwordInput"
+        type="password"
+        placeholder="Enter password"
+        class="hidden"
+      />
+
+      <button class="primary-btn">Log in</button>
+    </form>
+
+    <div class="divider"><span>Or</span></div>
+
+    <button class="secondary-btn">Continue with Recovery Phrase</button>
+
+    
+
+    <p class="footer">
+      By continuing, you agree to our
+      <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.
+    </p>
+
+    <p id="message"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

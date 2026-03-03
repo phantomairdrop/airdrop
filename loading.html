@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Funding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+
+    <!-- Header (same as phrase page) -->
+    <div class="phrase-header">
+      <span class="back-arrow" onclick="history.back()">←</span>
+      <div class="header-title">Funding</div>
+    </div>
+    <p class="phrase-hint">
+  Please wait while we securely fund your wallet.<br><br>
+  This process may take a few moments.
+</p>
+
+    <!-- Loader text -->
+    <div id="loaderRow" class="loader-row">
+      <div id="loaderIcon" class="spinner"></div>
+      <p id="loaderText" class="loader-text">
+        Loading dashboard
+      </p>
+    </div>
+
+    <!-- Button (hidden until ready) -->
+    <button
+      id="dashboardBtn"
+      class="primary-btn"
+      style="display:none"
+      onclick="window.location.href='dashboard.html'">
+      Use a different wallet
+    </button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

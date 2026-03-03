@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cwallet Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<script>
+  if (localStorage.getItem("auth") !== "true") {
+    window.location.replace("index.html");
+  }
+</script>
+
+<div class="container">
+  <div class="card">
+    <header class="wallet-header">
+      <h2>My Wallet</h2>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section class="balance-card">
+      <p>Total Balance</p>
+      <h1>$12,458.22</h1>
+    </section>
+
+    <section class="actions">
+      <div>Send</div>
+      <div>Receive</div>
+      <div>Swap</div>
+      <div>Buy</div>
+    </section>
+
+    <section class="assets">
+      <h3>Assets</h3>
+      <div class="asset">BTC <span>0.42</span></div>
+      <div class="asset">ETH <span>3.9</span></div>
+      <div class="asset">USDT <span>1,200</span></div>
+    </section>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
